@@ -42,5 +42,6 @@ if (isset($_SESSION['admin_name'])) {
     <link href="../../sb/css/sb-admin-2.min.css" rel="stylesheet">
     <link href="../../sb/css/sb-admin-2.css" rel="stylesheet">
     <link rel="stylesheet" href="../../CSS/admin/main.css">
+    <link rel="stylesheet" href="../../vendor/icofont/icofont.min.css">
     <title>My admin Panel</title>
 </head>

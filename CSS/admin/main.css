@@ -13,3 +13,9 @@
     display: none;
     transition: 0.3s ease;
 }
+
+.approval-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -41,6 +41,14 @@ if (!empty($ward) && !empty($residence) && !empty($gname) && !empty($gid) && !em
         if ($loanplan  == 1) {
             $interest = 0.04;
             $totalPay = $amount + ($amount * $interest);
+        }elseif($loanplan == 2) {
+            $interest == 0.08;
+            $totalPay = $amount + ($amount * $interest);
+        }elseif ($loanplan == 3) {
+            $interest == 0.06;
+            $totalPay = $amount + ($amount * $interest);
+        }else{
+            echo "No other Plan";
         }
         // insert into the borrowers table
 
