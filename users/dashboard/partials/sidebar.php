@@ -14,7 +14,7 @@
 
 <!-- Nav Item - Dashboard -->
 <li class="nav-item active">
-    <a class="nav-link" href="index.html">
+    <a class="nav-link" href="index.php">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Dashboard</span></a>
 </li>
@@ -39,6 +39,7 @@
             <h6 class="collapse-header">Loan Management:</h6>
             <a class="collapse-item" href="takeLoan.php">Take Loan</a>
             <a class="collapse-item" href="loanStat.php">Loan Status</a>
+            <a class="collapse-item" href="payLoan.php">Pay Loan</a>
             <a class="collapse-item" href="loanHist.php">Loan History</a>
         </div>
     </div>
