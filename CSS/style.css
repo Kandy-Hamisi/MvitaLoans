@@ -1,0 +1,93 @@
+.auth-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #f7f7f7;
+}
+
+.myCard{
+    width: 450px;
+    border-radius: 16px;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+    0 32px 64px -48px rgba(0,0,0,0.5);
+}
+
+.form-header {
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 16px 16px 0 0;
+    width: 100%;
+    background: #ccc;
+}
+
+form {
+    padding: 25px 30px;
+    margin: 20px 0;
+}
+
+.error-text {
+    background: rgb(250, 197, 197);
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+    display: none;
+    transition: 0.3s ease;
+}
+
+.name-details {
+    display: flex;
+}
+
+.name-details .form-group:first-child{
+    margin-right: 10px;
+}
+
+.name-details .form-group:last-child {
+    margin-right: 10px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.form-group .input {
+    outline: none;
+    height: 40px;
+    width: 100%;
+    padding: 0px 10px;
+    border: 1px solid #ccc;
+}
+
+.button input {
+    margin-top: 13px;
+    height: 45px;
+    border: none;
+    font-size: 17px;
+    font-weight: 400;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.link {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 17px;
+}
+
+.link a{
+    color: #333;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
