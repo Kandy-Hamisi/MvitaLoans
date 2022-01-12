@@ -1,5 +1,16 @@
 <?php
 
+
+// Importing PHpMailer classes into the global namespace
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+// load composer's autoloader
+require "../../vendor/autoload.php";
+
+
 include "../../dbConfig/config.php";
 
 // getting form input
@@ -33,7 +44,41 @@ if (!empty($fname) && !empty($lname) && !empty($elno) && !empty($idno) && !empty
                 $runQuery = mysqli_query($mysqli, $insert);
 
                 if ($runQuery) {
-                    echo "Success";
+                    // echo "Success";
+                    $mail = new PHPMailer(true);
+
+                    try {
+                        //Server settings
+                        $mail->SMTPDebug = 0; //SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+                        $mail->isSMTP();                                            //Send using SMTP
+                        $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+                        $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+                        $mail->Username   = 'your email';                     //SMTP username
+                        $mail->Password   = 'your email password';                               //SMTP password
+                        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+                        $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+                    
+                        //Recipients
+                        $mail->setFrom('your email', 'Mvita Loans');
+                        $mail->addAddress($email, $fname);     //Add a recipient
+                        $mail->addAddress($email);               //Name is optional
+                        $mail->addReplyTo('your email password', 'Information');
+                        
+                    
+                        //Content
+                        $mail->isHTML(true);                                  //Set email format to HTML
+                        $mail->Subject = 'Welcome Message';
+                        $mail->Body    = $fname." ". $lname. ' Thank you for registering in our system. Stay updated for similar emails during loan applications';
+                        $mail->AltBody = 'Do not reply to this emails';
+                        
+                        
+                        if ($mail->send()) {
+                            echo "Success";
+                        }
+                        
+                    } catch (Exception $e) {
+                        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+                    }
                 }else {
                     echo "Something Went Wrong";
                     printf("Error: \n%s ", mysqli_error($mysqli));

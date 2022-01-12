@@ -19,7 +19,7 @@ continueBtn.onclick = ()=>{
                 let data = xhr.response;
                 console.log(data);
                 if(data == "Success"){
-                    location.href = "../admin/dashboard/index.php";
+                    location.href = "../admin/dashboard/borrowers.php";
                 }else{
                     errorText.textContent = data;
                     errorText.style.display = "block";
