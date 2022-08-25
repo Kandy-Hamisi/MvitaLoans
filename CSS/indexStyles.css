@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f7daa485;
+    /* background-color: rgb(17, 15, 15); */
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* header styles */
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    padding-top: 2em;
+    z-index: 5;
+}
+
+.app-logo {
+    margin-left: 2.75em;
+    color: rgb(1, 99, 94)
+}
+
+nav {
+    margin-right: 3rem;
+}
+
+.menu-nav {
+    display: flex;
+}
+
+.menu-nav-item:first-child {
+    margin-right: 1rem;
+}
+
+.menu-nav__link {
+    color: gray;
+    cursor: pointer;
+    /* color: #fff; */
+}
+
+.menu-nav__link:hover {
+    transition: all 0.6s ease-in-out;
+    /* color: #333; */
+    color: gray;
+}
+
+/* her section styles */
+.hero-section {
+    padding-top: 10rem;
+    margin-left: 2.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.discount, .big-info {
+    margin-bottom: 1.5em;
+}
+
+.discount-info {
+    background: grey;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgb(212, 173, 173);
+}
+
+.big-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.big-c {
+    background: rgb(1, 99, 94);
+    height: 142px;
+    width: 142px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+.big-info h1 {
+    font-size: 72px;
+}
+
+.gen {
+    color: rgb(1, 99, 94);
+}
+
+.loan-info p {
+    color: gray;
+    max-width: 45em;
+    line-height: 1.5;
+}
+
+.initial-gradient {
+    background: linear-gradient(90deg,rgba(0, 248, 248, 0.5), rgba(228, 203, 203, 0.5));
+    height: 30%;
+    width: 40%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    filter: blur(900px);
+}
+
+.second-gradient {
+    background: rgba(255, 255, 255, 0.6);
+    filter: blur(750px);
+    height: 40%;
+    width: 80%;
+    position: absolute;
+    right: 0;
+    top: 10;
+    /* bottom: 40; */
+    z-index: 1;
+}
